@@ -8,6 +8,7 @@ import Footer from './components/Header&Footer/Footer'
 import Home from './pages/Home'
 import Unique from './pages/Unique'
 import Store from './pages/Store'
+import Search from './pages/Search'
 
 // [ ] CSS
 import ('./assets/css/extra.css')
@@ -32,8 +33,11 @@ const Main = () => {
       })
     }
     func()
-    console.log(product.product)
 
+
+    
+
+  
   return (
     <>
     
@@ -46,6 +50,7 @@ const Main = () => {
             <Route path='/' element={<Home data={product.product} category={category}/>}/>
             <Route path='/store' element={<Store data={product.product}/>}/>  
             <Route path='/store/:id' element={<Unique/>}/>
+            <Route path='/search' element={<Search data={product.product} />}/>  
           </Routes>
           
           <Footer/>
